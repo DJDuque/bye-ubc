@@ -48,6 +48,46 @@
   )
 ]
 
+#let committee_page(
+  title: none,
+  author: none,
+  degree: none,
+  program: none,
+  examining_committee: (),
+  additional_committee: (),
+) = [
+  The following individuals certify that they have read, and recommend to the
+  Faculty of Graduate and Postdoctoral Studies for acceptance, the dissertation
+  entitled:
+
+  #text(title, weight: "bold")
+
+  submitted by #text(author, weight: "bold") in partial fulfilment of the
+  requirements for the degree of #degree in #program.
+
+  #v(1em)
+  #text("Examining Committee:", weight: "bold")
+
+  #examining_committee.map(member => [
+    #text(member.name, weight: "bold"), #member.title, #member.department,
+    #member.institution \
+    #member.role
+    #v(0.1em)
+  ]).join()
+
+  #if additional_committee.len() > 0 [
+    #v(1em)
+    #text("Additional Supervisory Committee Members:", weight: "bold")
+
+    #additional_committee.map(member => [
+      #text(member.name, weight: "bold"), #member.title, #member.department,
+      #member.institution \
+      #member.role
+      #v(0.1em)
+    ]).join()
+  ]
+]
+
 #let thesis(
   title: [Thesis Title],
   author: "Your Name",
@@ -58,10 +98,21 @@
   month: "Month",
   year: "Year",
 
+  examining_committee: (
+    (
+      name: "Jane Doe",
+      title: "Unemployed",
+      department: "Department of Blindly Copying and Pasting",
+      institution: "Example University",
+      role: "Supervisor",
+    ),
+  ),
+  additional_committee: (),
+
   body,
 ) = {
   set document(title: title, author: author)
-  set page(width: 8.5in, height: 11in)
+  set page(width: 8.5in, height: 11in, number-align: right)
 
   title_page(
     title: title,
@@ -74,7 +125,16 @@
     year: year,
   )
 
-  set page(margin: (left: 1.25in, rest:1in))
+  set page(margin: (left: 1.25in, rest:1in), numbering: "i")
+
+  committee_page(
+    title: title,
+    author: author,
+    degree: degree,
+    program: program,
+    examining_committee: examining_committee,
+    additional_committee: additional_committee,
+  )
 
   body
 }
