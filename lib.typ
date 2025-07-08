@@ -111,6 +111,7 @@
 
   abstract: lorem(350),
   lay_summary: lorem(150),
+  preface: lorem(300),
 
   body,
 ) = {
@@ -145,6 +146,9 @@
 
   heading("Lay Summary")
   lay_summary
+
+  heading("Preface")
+  preface
 
   body
 }

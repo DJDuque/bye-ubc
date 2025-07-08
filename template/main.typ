@@ -62,4 +62,5 @@
   // the title above).
   abstract: include("./preliminary_pages/abstract.typ"),
   lay_summary: include("./preliminary_pages/lay_summary.typ"),
+  preface: include("./preliminary_pages/preface.typ"),
 )
