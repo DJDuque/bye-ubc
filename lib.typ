@@ -109,6 +109,8 @@
   ),
   additional_committee: (),
 
+  abstract: lorem(350),
+
   body,
 ) = {
   set document(title: title, author: author)
@@ -135,6 +137,10 @@
     examining_committee: examining_committee,
     additional_committee: additional_committee,
   )
+  pagebreak()
+
+  heading("Abstract")
+  abstract
 
   body
 }
