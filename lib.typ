@@ -150,5 +150,32 @@
   heading("Preface")
   preface
 
+  show outline: set heading(outlined: true)
+  outline(title: "Table of Contents")
+
+  context {
+    let num_tables = query(
+      figure.where(kind: table)
+    ).len()
+
+    if num_tables > 0 {
+      outline(
+        title: "List of Tables",
+        target: figure.where(kind: table),
+      )
+    }
+
+    let num_figures = query(
+      figure.where(kind: image)
+    ).len()
+
+    if num_figures > 0 {
+      outline(
+        title: "List of Figures",
+        target: figure.where(kind: image),
+      )
+    }
+  }
+
   body
 }
