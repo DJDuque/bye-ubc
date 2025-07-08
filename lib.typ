@@ -110,11 +110,13 @@
   additional_committee: (),
 
   abstract: lorem(350),
+  lay_summary: lorem(150),
 
   body,
 ) = {
   set document(title: title, author: author)
   set page(width: 8.5in, height: 11in, number-align: right)
+  show heading.where(level: 1): it => { pagebreak(weak: true); it }
 
   title_page(
     title: title,
@@ -137,10 +139,12 @@
     examining_committee: examining_committee,
     additional_committee: additional_committee,
   )
-  pagebreak()
 
   heading("Abstract")
   abstract
+
+  heading("Lay Summary")
+  lay_summary
 
   body
 }
