@@ -57,15 +57,9 @@
     ),
   ),
   additional_committee: (),
-  abstract: [
-    Write your abstract here. This should be a concise and accurate summary of
-    the thesis. It should not exceed 350 words, and you should not put a list of
-    keywords at the end. The abstract should also not include any tables,
-    graphs, or figures.
-  ],
-  lay_summary: [
-    Write your lay summary here. This should explain the key goals and
-    contributions of the research work in terms that can be understood by the
-    general public. It should not exceed 150 words in length.
-  ],
+  // Feel free to do these in whatever way works better for you. You can even
+  // write these sections directly in [...] context blocks here instead (like
+  // the title above).
+  abstract: include("./preliminary_pages/abstract.typ"),
+  lay_summary: include("./preliminary_pages/lay_summary.typ"),
 )
