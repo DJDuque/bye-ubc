@@ -70,4 +70,5 @@
   //   include the generating functions here.
   list_of_symbols: none,
   glossary: none,
+  acknowledgments: include("./preliminary_pages/acknowledgments.typ"),
 )

@@ -114,6 +114,7 @@
   preface: lorem(300),
   list_of_symbols: none,
   glossary: none,
+  acknowledgments: none,
 
   body,
 ) = {
@@ -187,6 +188,11 @@
   if glossary != none and glossary != [] {
     heading("Glossary")
     glossary
+  }
+
+  if acknowledgments != none and acknowledgments != [] {
+    heading("Acknowledgments")
+    acknowledgments
   }
 
   body
