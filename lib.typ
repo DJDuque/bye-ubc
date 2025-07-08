@@ -112,6 +112,8 @@
   abstract: lorem(350),
   lay_summary: lorem(150),
   preface: lorem(300),
+  list_of_symbols: none,
+  glossary: none,
 
   body,
 ) = {
@@ -175,6 +177,16 @@
         target: figure.where(kind: image),
       )
     }
+  }
+
+  if list_of_symbols != none and list_of_symbols != [] {
+    heading("List of Symbols")
+    list_of_symbols
+  }
+
+  if glossary != none and glossary != [] {
+    heading("Glossary")
+    glossary
   }
 
   body

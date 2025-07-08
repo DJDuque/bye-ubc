@@ -58,9 +58,16 @@
   ),
   additional_committee: (),
   // Feel free to do these in whatever way works better for you. You can even
-  // write these sections directly in [...] context blocks here instead (like
+  // write these sections directly in [...] content blocks here instead (like
   // the title above).
   abstract: include("./preliminary_pages/abstract.typ"),
   lay_summary: include("./preliminary_pages/lay_summary.typ"),
   preface: include("./preliminary_pages/preface.typ"),
+  // These are optional. You can:
+  // - Delete these lines if you want to omit them.
+  // - Write them by hand either here in a content block or in a separate file.
+  // - Use e.g. the `glossarium` or similar packages to handle these for you and
+  //   include the generating functions here.
+  list_of_symbols: none,
+  glossary: none,
 )
