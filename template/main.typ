@@ -71,6 +71,7 @@
   list_of_symbols: none,
   glossary: none,
   acknowledgments: include("./preliminary_pages/acknowledgments.typ"),
+  dedication: none,
   bibliography: bibliography("refs.bib"),
   // Also optional. If you don't have any appendices, you can delete this.
   // Same as all other sections, you can just include the content here from a

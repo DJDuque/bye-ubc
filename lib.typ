@@ -119,6 +119,7 @@
   list_of_symbols: none,
   glossary: none,
   acknowledgments: none,
+  dedication: none,
   // Bibliography is not optional even though it is `none` here. See the comment
   // below.
   bibliography: none,
@@ -201,6 +202,11 @@
   if acknowledgments != none and acknowledgments != [] {
     heading("Acknowledgments")
     acknowledgments
+  }
+
+  if dedication != none and dedication != [] {
+    heading("Dedication")
+    dedication
   }
 
   set page(numbering: "1")
