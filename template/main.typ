@@ -3,8 +3,8 @@
 #show: thesis.with(
   // Avoid using scientific symbols or Greek letters; spell out the words.
   title: [
-    Systematic Studies of Antihydrogen Detection for Improved Antimatter Gravity
-    Measurements in the ALPHA-g Experiment
+    Advanced Studies on the Optimization of Thesis Title Generation Algorithms
+    for Maximum Perceived Depth and Minimum Reviewer Scrutiny
   ],
   // Should be the name under which you are registered at UBC.
   author: "Daniel Duque",
