@@ -1,7 +1,7 @@
-#let title_page(
+#let title-page(
   title: none,
   author: none,
-  previous_degrees: (),
+  previous-degrees: (),
   degree: none,
   program: none,
   campus: none,
@@ -19,7 +19,7 @@
 
       #upper(author)
 
-      #previous_degrees.map(degree => [
+      #previous-degrees.map(degree => [
         #degree.abbr, #degree.institution, #degree.year \
       ]).join()
     ],
@@ -48,13 +48,13 @@
   )
 ]
 
-#let committee_page(
+#let committee-page(
   title: none,
   author: none,
   degree: none,
   program: none,
-  examining_committee: (),
-  additional_committee: (),
+  examining-committee: (),
+  additional-committee: (),
 ) = [
   The following individuals certify that they have read, and recommend to the
   Faculty of Graduate and Postdoctoral Studies for acceptance, the dissertation
@@ -68,18 +68,18 @@
   #v(1em)
   #text("Examining Committee:", weight: "bold")
 
-  #examining_committee.map(member => [
+  #examining-committee.map(member => [
     #text(member.name, weight: "bold"), #member.title, #member.department,
     #member.institution \
     #member.role
     #v(0.1em)
   ]).join()
 
-  #if additional_committee.len() > 0 [
+  #if additional-committee.len() > 0 [
     #v(1em)
     #text("Additional Supervisory Committee Members:", weight: "bold")
 
-    #additional_committee.map(member => [
+    #additional-committee.map(member => [
       #text(member.name, weight: "bold"), #member.title, #member.department,
       #member.institution \
       #member.role
@@ -95,14 +95,14 @@
 #let thesis(
   title: [Thesis Title],
   author: "Your Name",
-  previous_degrees: (),
+  previous-degrees: (),
   degree: "Your Degree",
   program: "Your Graduate Program",
   campus: "Your Campus",
   month: "Month",
   year: "Year",
 
-  examining_committee: (
+  examining-committee: (
     (
       name: "Jane Doe",
       title: "Unemployed",
@@ -111,12 +111,12 @@
       role: "Supervisor",
     ),
   ),
-  additional_committee: (),
+  additional-committee: (),
 
   abstract: lorem(350),
-  lay_summary: lorem(150),
+  lay-summary: lorem(150),
   preface: lorem(300),
-  list_of_symbols: none,
+  list-of-symbols: none,
   glossary: none,
   acknowledgments: none,
   dedication: none,
@@ -131,10 +131,10 @@
   set page(width: 8.5in, height: 11in, number-align: right)
   show heading.where(level: 1): it => { pagebreak(weak: true); it }
 
-  title_page(
+  title-page(
     title: title,
     author: author,
-    previous_degrees: previous_degrees,
+    previous-degrees: previous-degrees,
     degree: degree,
     program: program,
     campus: campus,
@@ -144,20 +144,20 @@
 
   set page(margin: (left: 1.25in, rest:1in), numbering: "i")
 
-  committee_page(
+  committee-page(
     title: title,
     author: author,
     degree: degree,
     program: program,
-    examining_committee: examining_committee,
-    additional_committee: additional_committee,
+    examining-committee: examining-committee,
+    additional-committee: additional-committee,
   )
 
   heading("Abstract")
   abstract
 
   heading("Lay Summary")
-  lay_summary
+  lay-summary
 
   heading("Preface")
   preface
@@ -166,22 +166,22 @@
   outline(title: "Table of Contents")
 
   context {
-    let num_tables = query(
+    let num-tables = query(
       figure.where(kind: table)
     ).len()
 
-    if num_tables > 0 {
+    if num-tables > 0 {
       outline(
         title: "List of Tables",
         target: figure.where(kind: table),
       )
     }
 
-    let num_figures = query(
+    let num-figures = query(
       figure.where(kind: image)
     ).len()
 
-    if num_figures > 0 {
+    if num-figures > 0 {
       outline(
         title: "List of Figures",
         target: figure.where(kind: image),
@@ -189,9 +189,9 @@
     }
   }
 
-  if list_of_symbols != none and list_of_symbols != [] {
+  if list-of-symbols != none and list-of-symbols != [] {
     heading("List of Symbols")
-    list_of_symbols
+    list-of-symbols
   }
 
   if glossary != none and glossary != [] {

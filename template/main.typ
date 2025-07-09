@@ -10,7 +10,7 @@
   author: "Daniel Duque",
   // Optional to list these. If listed, must have a degree (abbreviated, e.g.
   // MSc, BSc), institution and graduation year.
-  previous_degrees: (
+  previous-degrees: (
     /*
     (
       abbr: "MPhys",
@@ -37,10 +37,10 @@
   year: "2026",
   // Include all committee members. For supervisory committee members who were
   // not part of the examining committee, include them below under
-  // `additional_committee`.
+  // `additional-committee`.
   // Adding the external examiner is optional. Ask them whether or not they wish
   // to be listed in the committee page.
-  examining_committee: (
+  examining-committee: (
     (
       name: "John Doe",
       title: "Research Scientist",
@@ -56,19 +56,19 @@
       role: "Academic Co-supervisor",
     ),
   ),
-  additional_committee: (),
+  additional-committee: (),
   // Feel free to do these in whatever way works better for you. You can even
   // write these sections directly in [...] content blocks here instead (like
   // the title above).
   abstract: include("./preliminary_pages/abstract.typ"),
-  lay_summary: include("./preliminary_pages/lay_summary.typ"),
+  lay-summary: include("./preliminary_pages/lay_summary.typ"),
   preface: include("./preliminary_pages/preface.typ"),
   // These are optional. You can:
   // - Delete these lines if you want to omit them.
   // - Write them by hand either here in a content block or in a separate file.
   // - Use e.g. the `glossarium` or similar packages to handle these for you and
   //   include the generating functions here.
-  list_of_symbols: none,
+  list-of-symbols: none,
   glossary: none,
   acknowledgments: include("./preliminary_pages/acknowledgments.typ"),
   dedication: none,
