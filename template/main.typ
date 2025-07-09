@@ -71,9 +71,12 @@
   list_of_symbols: none,
   glossary: none,
   acknowledgments: include("./preliminary_pages/acknowledgments.typ"),
+  bibliography: bibliography("refs.bib"),
 )
 
 = Introduction
 This is the actual body of your thesis. You can write it here, but it is
 recommended to write each chapter in a separate file and include them using the
 `include("./path/to/chapter.typ")` command.
+
+Like @lorem2025 said: #lorem(15)

@@ -88,6 +88,10 @@
   ]
 ]
 
+// All arguments are named because there are too many of them.
+// Typst makes named arguments optional, so I have filled all non-optional
+// arguments with `lorem` text to make the user aware that they need to put
+// their own content in there.
 #let thesis(
   title: [Thesis Title],
   author: "Your Name",
@@ -115,6 +119,8 @@
   list_of_symbols: none,
   glossary: none,
   acknowledgments: none,
+  // Not optional
+  bibliography: none,
 
   body,
 ) = {
@@ -199,4 +205,14 @@
   context counter(page).update(1)
 
   body
+
+  // The bibliography is not optional, but using the same pattern as the other
+  // non-optional sections (default to random refs to make users aware) would
+  // require me to add an empty `refs.bib` file to the template, which I don't
+  // want to do (and I don't know if it would work pulling from @preview
+  // anyway).
+  if bibliography == none or bibliography == [] {
+    heading("Bibliography")
+  }
+  bibliography
 }
