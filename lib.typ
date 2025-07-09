@@ -204,6 +204,7 @@
   set page(numbering: "1")
   context counter(page).update(1)
 
+  set heading(numbering: "1.")
   body
 
   // The bibliography is not optional, but using the same pattern as the other
