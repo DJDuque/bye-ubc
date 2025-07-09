@@ -119,8 +119,10 @@
   list_of_symbols: none,
   glossary: none,
   acknowledgments: none,
-  // Not optional
+  // Bibliography is not optional even though it is `none` here. See the comment
+  // below.
   bibliography: none,
+  appendices: none,
 
   body,
 ) = {
@@ -216,4 +218,32 @@
     heading("Bibliography")
   }
   bibliography
+
+  if appendices != none and appendices != [] {
+    heading("Appendices", numbering: none)
+
+    set heading(
+      // Allow users to write each appendix as a level 1 heading, but then treat
+      // them magically as level 2 under the "Appendices" (level 1) heading.
+      offset: 1,
+      // I would like to have numbering "A:" instead of "A", but it is also
+      // showing the ":" when an appendix is referenced in the text.
+      // If you know how to fix this, please send a PR.
+      numbering: (_, ..rest) => "Appendix " + numbering("A", ..rest),
+      supplement: [],
+    )
+    // Each appendix should start on a new page, but the first one should not
+    // start with a pagebreak i.e. it should be right after the "Appendices"
+    // heading.
+    let s = state("after-first", false)
+    show heading.where(level: 2): it => {
+      if s.get() {
+        pagebreak(weak: true)
+      }
+      it
+      s.update(true)
+    }
+
+    appendices
+  }
 }

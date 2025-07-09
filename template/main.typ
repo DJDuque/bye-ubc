@@ -72,6 +72,16 @@
   glossary: none,
   acknowledgments: include("./preliminary_pages/acknowledgments.typ"),
   bibliography: bibliography("refs.bib"),
+  // Also optional. If you don't have any appendices, you can delete this.
+  // Same as all other sections, you can just include the content here from a
+  // separate file.
+  appendices: [
+    = First
+    #lorem(100)
+
+    = Second
+    #lorem(100)
+  ],
 )
 
 = Introduction
