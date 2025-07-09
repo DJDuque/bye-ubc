@@ -195,5 +195,8 @@
     acknowledgments
   }
 
+  set page(numbering: "1")
+  context counter(page).update(1)
+
   body
 }
