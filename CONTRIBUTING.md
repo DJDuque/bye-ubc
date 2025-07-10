@@ -42,7 +42,7 @@ semver-compatible version number.
 $env.NEXT_THESIS_UBC_VERSION = "X.Y.Z"
 ```
 
-### Set 4: Make all replacements
+### Step 4: Make all replacements
 
 Run the following commands to update the version number in all relevant files.
 
