@@ -6,7 +6,13 @@ authors = ["Daniel Duque <@DJDuque>"]
 license = "MIT"
 description = "A template for theses at the University of British Columbia"
 repository = "https://github.com/DJDuque/thesis-ubc"
-keywords = ["University of British Columbia", "UBC", "thesis", "dissertation", "template"]
+keywords = [
+    "University of British Columbia",
+    "UBC",
+    "thesis",
+    "dissertation",
+    "template",
+]
 categories = ["thesis"]
 compiler = "0.13.1"
 
