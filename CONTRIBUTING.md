@@ -22,7 +22,18 @@ make sure you are on the `main` branch and it is up-to-date.
 git switch -c release
 ```
 
-### Step 2: Determine the version number
+### Step 2: Update the changelog
+
+Check the
+[CHANGELOG](https://github.com/DJDuque/thesis-ubc/blob/main/CHANGELOG.md) and
+include anything relevant that was not already there. Then commit the
+changes to the changelog:
+
+```nu
+git commit -am "docs: Update CHANGELOG.md"
+```
+
+### Step 3: Determine the version number
 
 Check all the changes since the last release and determine the new
 semver-compatible version number.
@@ -31,7 +42,7 @@ semver-compatible version number.
 $env.NEXT_THESIS_UBC_VERSION = "X.Y.Z"
 ```
 
-### Set 3: Make all replacements
+### Step 4: Make all replacements
 
 Run the following commands to update the version number in all relevant files.
 
@@ -54,20 +65,21 @@ open --raw CHANGELOG.md
 | save --raw -f CHANGELOG.md
 ```
 
-### Step 4: Commit and push
+### Step 5: Commit and push
 
 ```nu
 git commit -am $"chore: Prepare release v($env.NEXT_THESIS_UBC_VERSION)"
 git push origin release
 ```
 
-### Step 5: Create a pull request to `main`
+### Step 6: Create a pull request to `main`
 
-### Step 6: Tag the release (once merged)
+### Step 7: Tag the release (once merged)
 
 ```nu
 git switch main
 git pull
+git branch release -d
 git tag $"v($env.NEXT_THESIS_UBC_VERSION)"
 git push origin tag $"v($env.NEXT_THESIS_UBC_VERSION)"
 ```
