@@ -129,6 +129,7 @@
 ) = {
   set document(title: title, author: author)
   set page(width: 8.5in, height: 11in, number-align: right)
+  set text(font: "Libertinus Serif", size: 12pt)
   show heading.where(level: 1): it => { pagebreak(weak: true); it }
 
   title-page(
@@ -143,6 +144,7 @@
   )
 
   set page(margin: (left: 1.25in, rest:1in), numbering: "i")
+  set par(justify: true)
 
   committee-page(
     title: title,

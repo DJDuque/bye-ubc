@@ -8,6 +8,12 @@ changes will be documented in this file.
 
 ## [Unreleased] - ReleaseDate
 
+### Fixed
+
+- Set text font to `Libertinus Serif`.
+- Set text size to `12pt`.
+- Justify text in the main body.
+
 ## [0.1.0] - 2025-07-09
 
 First usable version of the template.
