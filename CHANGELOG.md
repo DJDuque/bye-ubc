@@ -8,6 +8,11 @@ changes will be documented in this file.
 
 ## [Unreleased] - ReleaseDate
 
+### Breaking Changes
+
+- Template renamed to `bye-ubc`. This was done to adhere to Typst packages
+  naming rules for non-endorsed templates.
+
 ### Fixed
 
 - Set text font to `Libertinus Serif`.
