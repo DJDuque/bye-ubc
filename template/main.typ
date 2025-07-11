@@ -1,4 +1,4 @@
-#import "@preview/bye-ubc:0.1.0": thesis
+#import "@preview/bye-ubc:0.2.0": thesis
 
 #show: thesis.with(
   // Avoid using scientific symbols or Greek letters; spell out the words.
