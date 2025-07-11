@@ -2,11 +2,11 @@
 
 ## Pull Requests
 
-All contributions to `thesis-ubc` happen through pull requests. It is highly
+All contributions to `bye-ubc` happen through pull requests. It is highly
 recommended to discuss any change by opening an
-[issue](https://github.com/DJDuque/thesis-ubc/issues) before you start working
+[issue](https://github.com/DJDuque/bye-ubc/issues) before you start working
 on a pull request. Additionally, please look at the GitHub actions
-[workflows](https://github.com/DJDuque/thesis-ubc/tree/main/.github/workflows)
+[workflows](https://github.com/DJDuque/bye-ubc/tree/main/.github/workflows)
 to find out all the checks that your code has to pass before it can be
 reviewed/merged.
 
@@ -25,7 +25,7 @@ git switch -c release
 ### Step 2: Update the changelog
 
 Check the
-[CHANGELOG](https://github.com/DJDuque/thesis-ubc/blob/main/CHANGELOG.md) and
+[CHANGELOG](https://github.com/DJDuque/bye-ubc/blob/main/CHANGELOG.md) and
 include anything relevant that was not already there. Then commit the
 changes to the changelog:
 
@@ -52,7 +52,7 @@ open typst.toml | upsert package.version $env.NEXT_THESIS_UBC_VERSION | save -f 
 
 # New version imported in `template/main.typ`
 open --raw template/main.typ
-| str replace --regex '^#import "@preview/thesis-ubc:\d+\.\d+\.\d+": thesis' $"#import \"@preview/thesis-ubc:($env.NEXT_THESIS_UBC_VERSION)\": thesis"
+| str replace --regex '^#import "@preview/bye-ubc:\d+\.\d+\.\d+": thesis' $"#import \"@preview/bye-ubc:($env.NEXT_THESIS_UBC_VERSION)\": thesis"
 | save --raw -f template/main.typ
 
 # Changelog updates
@@ -61,7 +61,7 @@ open --raw CHANGELOG.md
 | str replace "...HEAD" $"...v($env.NEXT_THESIS_UBC_VERSION)"
 | str replace "ReleaseDate" (date now | format date '%Y-%m-%d')
 | str replace "<!-- next-header -->" "<!-- next-header -->\n\n## [Unreleased] - ReleaseDate"
-| str replace "<!-- next-url -->" $"<!-- next-url -->\n[Unreleased]: https://github.com/DJDuque/thesis-ubc/compare/v($env.NEXT_THESIS_UBC_VERSION)...HEAD"
+| str replace "<!-- next-url -->" $"<!-- next-url -->\n[Unreleased]: https://github.com/DJDuque/bye-ubc/compare/v($env.NEXT_THESIS_UBC_VERSION)...HEAD"
 | save --raw -f CHANGELOG.md
 ```
 
