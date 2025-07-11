@@ -144,6 +144,7 @@
   )
 
   set page(margin: (left: 1.25in, rest:1in), numbering: "i")
+  set par(justify: true)
 
   committee-page(
     title: title,
