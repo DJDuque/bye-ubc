@@ -129,6 +129,7 @@
 ) = {
   set document(title: title, author: author)
   set page(width: 8.5in, height: 11in, number-align: right)
+  set text(font: "Libertinus Serif", size: 12pt)
   show heading.where(level: 1): it => { pagebreak(weak: true); it }
 
   title-page(
