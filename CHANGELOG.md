@@ -8,6 +8,12 @@ changes will be documented in this file.
 
 ## [Unreleased] - ReleaseDate
 
+### Changed
+
+- Changed `#include("file.typ")` to `#include "file.typ"` throughout the
+  template. This is more idiomatic in Typst as `include` is not a function
+  but a keyword.
+
 ## [0.2.0] - 2025-07-11
 
 ### Breaking Changes

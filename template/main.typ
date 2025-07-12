@@ -60,9 +60,9 @@
   // Feel free to do these in whatever way works better for you. You can even
   // write these sections directly in [...] content blocks here instead (like
   // the title above).
-  abstract: include("./preliminary_pages/abstract.typ"),
-  lay-summary: include("./preliminary_pages/lay_summary.typ"),
-  preface: include("./preliminary_pages/preface.typ"),
+  abstract: include "./preliminary_pages/abstract.typ",
+  lay-summary: include "./preliminary_pages/lay_summary.typ",
+  preface: include "./preliminary_pages/preface.typ",
   // These are optional. You can:
   // - Delete these lines if you want to omit them.
   // - Write them by hand either here in a content block or in a separate file.
@@ -70,7 +70,7 @@
   //   include the generating functions here.
   list-of-symbols: none,
   glossary: none,
-  acknowledgments: include("./preliminary_pages/acknowledgments.typ"),
+  acknowledgments: include "./preliminary_pages/acknowledgments.typ",
   dedication: none,
   bibliography: bibliography("refs.bib"),
   // Also optional. If you don't have any appendices, you can delete this.
@@ -88,6 +88,6 @@
 = Introduction
 This is the actual body of your thesis. You can write it here, but it is
 recommended to write each chapter in a separate file and include them using the
-`include("./path/to/chapter.typ")` command.
+`include "./path/to/chapter.typ"` keyword.
 
 Like @lorem2025 said: #lorem(15)
