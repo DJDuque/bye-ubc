@@ -8,6 +8,15 @@ changes will be documented in this file.
 
 ## [Unreleased] - ReleaseDate
 
+### Fixed
+
+- Fixed appendix numbering. It now correctly shows the colon in headers and
+  outline (e.g. `Appendix A:`). It shows up correctly when referenced in text
+  without the colon (e.g. `Appendix A`).
+- Fixed indentation in table of contents. Each body level 2 entry was indented
+  to match the "Appendix X:" supplement horizontal position. It now all has a
+  fixed relative length indentation.
+
 ## [0.2.1] - 2025-07-12
 
 ### Changed

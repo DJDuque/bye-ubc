@@ -131,6 +131,16 @@
   set page(width: 8.5in, height: 11in, number-align: right)
   set text(font: "Libertinus Serif", size: 12pt)
   show heading.where(level: 1): it => { pagebreak(weak: true); it }
+  // See https://stackoverflow.com/a/79734315/17729094
+  show ref: it => {
+    let el = it.element
+    if el == none or el.func() != heading or el.level != 2 or el.supplement != [Appendix] {
+      return it
+    }
+    let lvl = counter(heading).at(el.location()).at(1)
+    let body = el.supplement + numbering(" A", lvl)
+    link(el.location(), body)
+  }
 
   title-page(
     title: title,
@@ -165,7 +175,9 @@
   preface
 
   show outline: set heading(outlined: true)
-  outline(title: "Table of Contents")
+  // Relative length indentation is needed because of the "Supplement" used for
+  // appendices headings makes outline level 2 entries shift too much.
+  outline(title: "Table of Contents", indent: 1.25em)
 
   context {
     let num-tables = query(
@@ -234,11 +246,9 @@
       // Allow users to write each appendix as a level 1 heading, but then treat
       // them magically as level 2 under the "Appendices" (level 1) heading.
       offset: 1,
-      // I would like to have numbering "A:" instead of "A", but it is also
-      // showing the ":" when an appendix is referenced in the text.
-      // If you know how to fix this, please send a PR.
-      numbering: (_, ..rest) => "Appendix " + numbering("A", ..rest),
-      supplement: [],
+      // See https://stackoverflow.com/a/79734315/17729094
+      numbering: (_, ..rest) => "Appendix " + numbering("A:", ..rest),
+      supplement: [Appendix],
     )
     // Each appendix should start on a new page, but the first one should not
     // start with a pagebreak i.e. it should be right after the "Appendices"
