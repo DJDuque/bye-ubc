@@ -8,6 +8,8 @@ changes will be documented in this file.
 
 ## [Unreleased] - ReleaseDate
 
+## [0.2.2] - 2025-08-31
+
 ### Fixed
 
 - Fixed appendix numbering. It now correctly shows the colon in headers and
@@ -43,7 +45,8 @@ changes will be documented in this file.
 First usable version of the template.
 
 <!-- next-url -->
-[Unreleased]: https://github.com/DJDuque/bye-ubc/compare/v0.2.1...HEAD
+[Unreleased]: https://github.com/DJDuque/bye-ubc/compare/v0.2.2...HEAD
+[0.2.2]: https://github.com/DJDuque/bye-ubc/compare/v0.2.1...v0.2.2
 [0.2.1]: https://github.com/DJDuque/bye-ubc/compare/v0.2.0...v0.2.1
 [0.2.0]: https://github.com/DJDuque/bye-ubc/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/DJDuque/bye-ubc/compare/ff59a76890c1153a5329b0744f315aa6307a4c42...v0.1.0
