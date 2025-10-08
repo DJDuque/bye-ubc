@@ -241,6 +241,9 @@
 
   if appendices != none and appendices != [] {
     heading("Appendices", numbering: none)
+    // Given that the appendices heading has no numbering, the following
+    // appendices will inherit the subsection counter from the previous section.
+    counter(heading).update(0)
 
     set heading(
       // Allow users to write each appendix as a level 1 heading, but then treat
