@@ -242,7 +242,7 @@
   if appendices != none and appendices != [] {
     heading("Appendices", numbering: none)
     // Given that the appendices heading has no numbering, the following
-    // appendices will inherit the subsection counter form the previous section.
+    // appendices will inherit the subsection counter from the previous section.
     counter(heading).update(0)
 
     set heading(
