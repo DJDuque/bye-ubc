@@ -8,6 +8,11 @@ changes will be documented in this file.
 
 ## [Unreleased] - ReleaseDate
 
+### Fixed
+
+- Fixed appendix numbering. Appendices now always start at `A` and increment
+  alphabetically.
+
 ## [0.2.2] - 2025-08-31
 
 ### Fixed
