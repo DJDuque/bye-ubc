@@ -15,6 +15,7 @@ keywords = [
 ]
 categories = ["thesis"]
 compiler = "0.13.1"
+exclude = ["/.git", "/.github"]
 
 [template]
 path = "template"

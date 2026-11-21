@@ -8,6 +8,11 @@ changes will be documented in this file.
 
 ## [Unreleased] - ReleaseDate
 
+### Fixed
+
+- Fixed the `heading` supplement to correctly display `Chapter` instead of
+  `Section` when e.g. referencing chapters within the text.
+
 ## [0.2.3] - 2025-10-08
 
 ### Fixed
