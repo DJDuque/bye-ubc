@@ -130,6 +130,7 @@
   set document(title: title, author: author)
   set page(width: 8.5in, height: 11in, number-align: right)
   set text(font: "Libertinus Serif", size: 12pt)
+  set heading(supplement: [Chapter])
   show heading.where(level: 1): it => { pagebreak(weak: true); it }
   // See https://stackoverflow.com/a/79734315/17729094
   show ref: it => {
