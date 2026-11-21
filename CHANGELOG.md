@@ -8,6 +8,8 @@ changes will be documented in this file.
 
 ## [Unreleased] - ReleaseDate
 
+## [0.2.4] - 2026-11-21
+
 ### Fixed
 
 - Fixed the `heading` supplement to correctly display `Chapter` instead of
@@ -57,7 +59,8 @@ changes will be documented in this file.
 First usable version of the template.
 
 <!-- next-url -->
-[Unreleased]: https://github.com/DJDuque/bye-ubc/compare/v0.2.3...HEAD
+[Unreleased]: https://github.com/DJDuque/bye-ubc/compare/v0.2.4...HEAD
+[0.2.4]: https://github.com/DJDuque/bye-ubc/compare/v0.2.3...v0.2.4
 [0.2.3]: https://github.com/DJDuque/bye-ubc/compare/v0.2.2...v0.2.3
 [0.2.2]: https://github.com/DJDuque/bye-ubc/compare/v0.2.1...v0.2.2
 [0.2.1]: https://github.com/DJDuque/bye-ubc/compare/v0.2.0...v0.2.1

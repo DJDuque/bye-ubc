@@ -1,6 +1,6 @@
 [package]
 name = "bye-ubc"
-version = "0.2.3"
+version = "0.2.4"
 entrypoint = "lib.typ"
 authors = ["Daniel Duque <@DJDuque>"]
 license = "MIT"
@@ -15,7 +15,10 @@ keywords = [
 ]
 categories = ["thesis"]
 compiler = "0.13.1"
-exclude = ["/.git", "/.github"]
+exclude = [
+    "/.git",
+    "/.github",
+]
 
 [template]
 path = "template"
